@@ -1,0 +1,13 @@
+.menu_box {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.menu_box a {
+	color: #5E5E5E; 
+}
+.menu_box a:hover{
+	transition: 0.2s;
+	color: red
+}
