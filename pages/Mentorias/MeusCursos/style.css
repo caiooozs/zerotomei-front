@@ -1,9 +1,60 @@
-body{
+body {
   font-family: poppins, sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
-.container-cursos{
+.container-cursos {
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
+}
+
+.mentorias-disponiveis {
+  margin: 22px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mentorias-texto {
+  display: flex;
+  flex-direction: row;
+  gap: 82px;
+}
+
+.mentorias-texto h2 {
+  font-size: 17.87px;
+  font-weight: 500;
+}
+
+.mentorias-texto p {
+  color: #8E292D;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-container-mentoria {
+  width: 360px;
+  height: 243px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.card-mentoria {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-mentoria img{
+  width: 72px;
+  height: 71px;
+}
+
+.card-icone .icone {
+  width: 14px;
+  height: 14px;
 }
