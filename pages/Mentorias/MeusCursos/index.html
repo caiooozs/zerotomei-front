@@ -8,95 +8,97 @@
     <link rel="stylesheet" href="../../../shared/styles/global.css">
     <link rel="stylesheet" href="../../../shared/components/Navbar/style.css">
     <link rel="stylesheet" href="./style.css">
-    <title></title>
+    <title> Meus cursos </title>
 </head>
 
 <body>
 
-    <nav>
-        <div id="navbar"></div>
-    </nav>
+    <header id="navbar"></header>
 
     <main>
+        <section id="container-meuscursos">
+            <div class="cabecalho-meuscursos">
+                <h1>Em andamento</h1>
 
-        <section class="container-cursos">
-            <div class="tutulo">
-                <h1></h1>
-                <i></i>
+                <button class="img">
+                    <img src="../Assets/Filter.svg" alt="Icone de menu">
+                </button>
             </div>
 
-            <!-- cards da mentoria -->
-            <div class="mentorias-disponiveis">
+            <div class="container-destaque">
+
+                <div class="mentoria-texto">
+                    <h2>Cursos em andamento</h2>
+                </div>
+
+
+                <div class="card-destaque">
+                    <img src="../Assets/macbook-air-on-desk 1.png" alt="">
+                    <div class="info-curso">
+                        <h2>Como controlar suas finanças</h2>
+                        <p>Aprenda a ter controle total do seu dinheiro.</p>
+                    </div>
+                    <div class="curso-footer">
+                        <span>70% Concluído</span>
+                        <button class="btn-curso"> Continuar</button>
+                    </div>
+                </div>
+
+                <div class="card-destaque">
+                    <img src="../Assets/creative-designers-desk 1.png" alt="">
+                    <div class="info-curso">
+                        <h2>Como controlar suas finanças</h2>
+                        <p>Aprenda a ter controle total do seu dinheiro.</p>
+                    </div>
+                    <div class="curso-footer">
+                        <span>70% Concluído</span>
+                        <button class="btn-curso"> Continuar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-container-mentoria">
 
                 <div class="mentorias-texto">
-                    <h2>Mentorias disponiveis</h2>
-                    <p>Ver todos</p>
+                    <h2>Mentorias em andamento</h2>
                 </div>
 
-                <div class="card-container-mentoria">
-
-                    <div class="card-mentoria">
-                        <img src="../Assets/professional-smiling-woman 1.png" alt="">
-                        <h2>Finanças para iniciantes</h2>
-                        <p>Com Fernada</p>
-                        <div class="card-icone">
-                            <i> <img class="icone" src="../Assets/Star.svg" alt="Icone estrela"> <span>4,8</span></i>
-                            <p>Online</p>
-                        </div>
-                    </div>
-
-                    <div class="card-mentoria">
-                        <img src="../Assets/modern-business-woman-portrait 1.png" alt="">
-                        <h2>Marketing que vende</h2>
-                        <p>Com Elena Gonçalves</p>
-                        <div class="card-icone">
-                            <i> <img class="icone" src="../Assets/Star.svg" alt="Icone estrela"> <span>4,8</span></i>
-                            <p>Online</p>
-                        </div>
-                    </div>
-
-                    <div class="card-mentoria">
-                        <img src="../Assets/smiling-man-in-blue 1.png" alt="">
-                        <h2>Organização e produtividade</h2>
-                        <p>Com Robson Gomes</p>
-                        <div class="card-icone">
-                            <i> <img class="icone" src="../Assets/Star.svg" alt="Icone estrela"> <span>4,8</span></i>
-                            <p>Online</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Cursos em destaque -->
-                <div class="curso-destaque">
-                    <h2>Curso em destaque</h2>
-                    <p>Ver todos</p>
-
-                    <div class="container-destaque">
-                        <div class="card-destaque">
-                            <img src="../Assets/macbook-air-on-desk 1.png" alt="">
-                            <h2>Como controlar suas finanças</h2>
-                            <p>Aprenda a ter controle total do seu dinheiro.</p>
-                            <span>20 Min</span>
-                        </div>
-
-                        <div class="card-destaque">
-                            <img src="../Assets/creative-designers-desk 1.png" alt="">
-                            <h2>Como controlar suas finanças</h2>
-                            <p>Aprenda a ter controle total do seu dinheiro.</p>
-                            <span>20 Min</span>
-                        </div>
-
+                <div class="card-mentoria">
+                    <img src="../Assets/professional-smiling-woman 1.png" alt="">
+                    <h2>Fernanda Lima</h2>
+                    <p>Finanças para iniciantes</p>
+                    <div class="card-icone">
+                        <i> <img class="icone" src="../Assets/Message circle.svg" alt="Iconde chat"></i>
+                        <p>Online</p>
                     </div>
                 </div>
+
+                <div class="card-mentoria">
+                    <img src="../Assets/modern-business-woman-portrait 1.png" alt="">
+                    <h2>Elena Gonçalves</h2>
+                    <p>Marketing que vende </p>
+                    <div class="card-icone">
+                        <i> <img class="icone" src="../Assets/Message circle.svg" alt="Iconde chat"></i>
+                        <p>Online</p>
+                    </div>
+                </div>
+
+                <div class="card-mentoria">
+                    <img src="../Assets/smiling-man-in-blue 1.png" alt="">
+                    <h2>Robson Gomes </h2>
+                    <p>Organização e produtividade</p>
+                    <div class="card-icone">
+                        <i> <img class="icone" src="../Assets/Message circle.svg" alt="Iconde chat"></i>
+                        <p>Online</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div id="footer"></div>
-    </footer>
-
-
+    <footer id="footer"></footer>
 </body>
 
 <script src="script.js"></script>
