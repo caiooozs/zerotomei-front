@@ -1,15 +1,66 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../shared/styles/reset.css">
-    <link rel="stylesheet" href="../../../shared/styles/global.css">
-    <link rel="stylesheet" href="./style.css">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Do Zero ao MEI</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
 
-<body></body>
+  <div class="login-container">
+    
+    <!-- Lembre-se de colocar a imagem da sua logo com o nome logo.png na mesma pasta -->
+    <div class="logo-container">
+      <img src="">
+    </div>
 
+    <h2 class="title">LOGIN</h2>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="email" id="email" placeholder="E-mail" required>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Senha" required>
+      </div>
+
+      <div class="forgot-password">
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <button type="submit" class="btn-primary">ENTRAR</button>
+    </form>
+
+    <!-- Botões sociais corrigidos -->
+    <div class="social-login">
+      <button type="button" class="btn-social google">
+        <i class="fa-brands fa-google"></i>
+      </button>
+      <button type="button" class="btn-social facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </button>
+      <button type="button" class="btn-social menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="signup-link">
+      <a href="#">Criar minha conta</a>
+    </div>
+
+    <footer class="footer-terms">
+      By signing in with an account, you agree<br>to the Terms of Service and Privacy Policy.
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
