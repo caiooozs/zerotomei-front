@@ -84,10 +84,15 @@ form {
   margin-bottom: 28px;
 }
 
+
 .forgot-password a {
   font-size: 11px;
   color: #333333;
   text-decoration: underline;
+}
+
+.forgot-password{
+  display: flex;
 }
 
 /* Botão Entrar */
