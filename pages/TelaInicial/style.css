@@ -1,0 +1,312 @@
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+#tela-inicia-container {
+  width: calc(100% - 32px);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo {
+  margin: 0;
+  margin: 1rem 0;
+
+}
+
+.titulo h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111111;
+}
+
+
+
+.container-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.card-tela {
+  width: 100%;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) 55px;
+  grid-template-rows: 30px 30px 20px;
+  background-color: #F4EFEB;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+}
+
+
+.card-tela>img {
+  width: 80px;
+  height: 90px;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+.card-tela>img#redondo {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+.card-tela>h2 {
+  min-width: 0;
+  margin: 10px 5px 0 10px;
+  font-size: 13px;
+  line-height: 1.1;
+  font-weight: 600;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+.card-tela>p {
+  min-width: 0;
+  margin: 0 5px 0 10px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.25;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+.card-tela:first-child .textos-cards {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  font-size: 11px;
+}
+
+
+/* TEMPO */
+
+.card-tela:first-child .textos-cards p {
+  margin: 0 0 0 10px;
+  font-size: 11px;
+}
+
+
+.card-tela:first-child .textos-cards span {
+  margin-left: auto;
+  margin-right: 8px;
+  font-size: 11px;
+}
+
+
+
+.card-tela:nth-child(2) {
+  grid-template-columns: 90px minmax(0, 1fr) 55px;
+
+}
+
+
+
+.card-tela:nth-child(2)>h2 {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  margin-top: 10px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+
+
+
+.card-tela:nth-child(2)>p {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 10;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+
+.card-tela:nth-child(2) .textos-cards {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  min-width: 0;
+}
+
+
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.avaliacao i {
+  display: flex;
+  align-items: center;
+}
+
+.avaliacao i img {
+  width: 14px;
+  height: 14px;
+}
+
+
+.avaliacao span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+
+.card-tela:nth-child(2) .textos-cards small {
+  margin-top: 3px;
+  margin-left: 12px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+
+.pendencias {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+
+.card-pendencias {
+  width: 100%;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr) 25px;
+  grid-template-rows: auto auto;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #f3efec;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+
+
+.icone-pendencia {
+  display: flex;
+  margin-bottom:3rem;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+
+.icone-pendencia img {
+  width: 21px;
+  height: 20px;
+}
+.texto-pendencia {
+  width: 230px;
+  height: 46px;
+  min-width: 2rem ; 
+  grid-column: 2;
+  grid-row: 1 / 3;
+  margin: 0.5rem 1rem;
+}
+
+
+.texto-pendencia h2 {
+  margin: 0 0 3px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+.texto-pendencia p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: medium;
+}
+
+
+.botao-adicionar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin-right: 1rem;
+}
+
+
+.botao-adicionar img {
+  width: 25px;
+  height: 25px;
+}
+
+.atividades {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #f3efec;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+
+.atividades h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #8E292D;
+}
+
+
+
+.atividades>i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.atividades>i img {
+  width: 70px;
+  height: 30px;
+}
+
