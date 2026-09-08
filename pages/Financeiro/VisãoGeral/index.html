@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../shared/styles/reset.css">
-    <link rel="stylesheet" href="../../../shared/styles/global.css">
-    <link rel="stylesheet" href="./style.css">
-    <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financeiro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+  <div class="container">
 
-<body></body>
+    <div class="header">
+      <h1>Financeiro</h1>
+      <div class="filter-icon">
+        <img src="../Assets/Filter.svg" alt="Filtro" />
+      </div>
+    </div>
 
+    <div class="tabs">
+      <span class="tab active">Visão geral</span>
+      <span class="tab">Receitas</span>
+      <span class="tab">Despesas</span>
+    </div>
+
+    
+    <div class="card-saldo">
+      <p class="card-saldo-label">Saldo disponível</p>
+      <div class="card-saldo-row">
+        <p class="card-saldo-valor">R$: 0,00</p>
+        <span class="icon-edit"><img src="../Assets/Edit 2.png"></span>
+      </div>
+    </div>
+
+   
+    <div class="cards-duplos">
+      <div class="card-mini">
+        <p class="card-mini-label">Contas a pagar</p>
+        <div class="card-mini-row">
+          <p class="card-mini-valor vermelho">R$: 0,00</p>
+          <span class="icon-edit-mini"><img src="../Assets/Edit 3.png">  </span>
+        </div>
+      </div>
+      <div class="card-mini">
+        <p class="card-mini-label">Contas a receber</p>
+        <div class="card-mini-row">
+          <p class="card-mini-valor verde">R$: 0,00</p>
+          <span class="icon-edit-mini"><img src="../Assets/Edit 3.png"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-title">Despesas:</p>
+
+    <div class="cards-despesas">
+      <div class="card-despesa">
+        <p class="card-despesa-texto">Indisponível</p>
+      </div>
+      <div class="card-despesa">
+        <p class="card-despesa-texto">Indisponível</p>
+      </div>
+      <div class="card-despesa">
+        <p class="card-despesa-texto">Indisponível</p>
+      </div>
+    </div>
+
+    <div class="exemplo-header">
+      <p class="section-title">Exemplo:</p>
+      <span class="ver-mais">Ver mais</span>
+    </div>
+
+    <div class="card-exemplo">
+      <div class="card-exemplo-esquerda">
+        <span class="seta-cima">↑</span>
+        <p class="card-exemplo-nome">Uber do brasil Ltda</p>
+      </div>
+      <div class="card-exemplo-direita">
+        <p class="card-exemplo-valor">-R$ 120,00</p>
+        <span class="icon-lixo"><img src="../Assets/Trash.svg">  </span>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+</body>
 </html>
