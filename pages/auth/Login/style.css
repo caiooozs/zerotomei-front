@@ -52,20 +52,20 @@ body {
   font-weight: 600;
 }
 
-form {
-  width: 100%;
+.loginForm {
+  width:100%;
 }
 
 .input-group {
   margin-bottom: 14px;
+
 }
 
 /* Campos ajustados para bater com a imagem do Figma */
 .input-group input {
-  width: 100%;
   padding: 14px 18px;
   border: 1px solid #e2e2e2;
-  border-radius: 10px; /* Bordas suaves como no Figma */
+  border-radius: 17.05px; /* Bordas suaves como no Figma */
   background-color: #fcfcfc;
   font-size: 13px;
   outline: none;

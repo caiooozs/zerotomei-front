@@ -21,7 +21,6 @@ body {
   min-height: 100vh;
 }
 
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,7 @@ body {
 }
 
 .filter-icon span::before {
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -57,13 +56,12 @@ body {
 }
 
 .filter-icon span::after {
-  content: '';
+  content: "";
   height: 2px;
   width: 22px;
   background: #c0392b;
   border-radius: 2px;
 }
-
 
 .tabs {
   display: flex;
@@ -73,6 +71,7 @@ body {
 }
 
 .tab {
+  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   color: #999;
@@ -87,7 +86,6 @@ body {
   border-bottom: 2px solid #c0392b;
 }
 
-
 .card-saldo {
   background: #8b1a1a;
   border-radius: 12px;
@@ -97,7 +95,7 @@ body {
 
 .card-saldo-label {
   font-size: 13px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 8px;
 }
 
@@ -118,9 +116,6 @@ body {
   cursor: pointer;
   opacity: 0.8;
 }
-
-
-
 
 .cards-duplos {
   display: flex;
@@ -152,8 +147,12 @@ body {
   font-weight: 700;
 }
 
-.vermelho { color: #c0392b; }
-.verde { color: #27ae60; }
+.vermelho {
+  color: #c0392b;
+}
+.verde {
+  color: #27ae60;
+}
 
 .icon-edit-mini {
   font-size: 14px;
@@ -167,7 +166,6 @@ body {
   color: #1a1a1a;
   margin-bottom: 12px;
 }
-
 
 .cards-despesas {
   display: flex;
@@ -184,9 +182,8 @@ body {
 
 .card-despesa-texto {
   font-size: 14px;
-  color: #8E292D;
+  color: #8e292d;
 }
-
 
 .exemplo-header {
   display: flex;
@@ -200,7 +197,6 @@ body {
   color: #c0392b;
   cursor: pointer;
 }
-
 
 .card-exemplo {
   display: flex;

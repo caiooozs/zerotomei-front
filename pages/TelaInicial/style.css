@@ -6,12 +6,211 @@ body {
 
 
 #tela-inicia-container {
-  width: calc(100% - 32px);
-  margin: 20px auto;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
+
+/* ---------- TOPO ---------- */
+
+.telainicial__topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+
+.telainicial__logo {
+  width: 40px;
+  height: 46px;
+  object-fit: contain;
+}
+
+
+.telainicial__saudacao {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+
+.telainicial__opcoes {
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+.telainicial__opcoes img {
+  width: 26px;
+  height: 26px;
+}
+
+
+/* ---------- BANNER ---------- */
+
+.banner {
+  position: relative;
+  margin: 0 8px;
+  min-height: 206px;
+  border-radius: 8px;
+  border: 0.5px solid rgba(142, 41, 45, 0.73);
+  background: linear-gradient(135deg, #670A0E 0%, #BB4045 100%);
+  overflow: hidden;
+}
+
+
+.banner__conteudo {
+  position: relative;
+  z-index: 1;
+  padding: 18px 20px 20px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+
+.banner__titulo {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.22;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+.banner__texto {
+  width: 129px;
+  margin: 14px 0 0;
+  font-size: 11px;
+  line-height: 1.28;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+
+.banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #670A0E;
+}
+
+
+.banner__ilustracao {
+  position: absolute;
+  right: -18px;
+  bottom: 16px;
+  width: 170px;
+  height: auto;
+  pointer-events: none;
+}
+
+
+/* ---------- RESUMO DAS FINANÇAS ---------- */
+
+.resumo {
+  margin-top: 14px;
+}
+
+
+.resumo__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+
+.resumo__topo h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+.resumo__periodo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E292D;
+}
+
+
+.resumo__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 12px;
+}
+
+
+.resumo__card {
+  min-height: 88px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+
+.resumo__card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+.resumo__card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8E292D;
+}
+
+
+.resumo__card p {
+  margin: 6px 0 0;
+  font-size: 9px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+.resumo__seta {
+  color: #8E292D;
+  font-weight: 600;
+}
+
 
 .titulo {
   margin: 0;

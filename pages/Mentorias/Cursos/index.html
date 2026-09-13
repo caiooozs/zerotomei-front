@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../shared/styles/reset.css" />
     <link rel="stylesheet" href="../../../shared/styles/global.css" />
+    <link rel="stylesheet" href="../../../shared/components/MentoriasNavBar/style.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title></title>
+    <title>Cursos</title>
   </head>
 
-  <div class="header">
-    <h1>Cursos</h1>
-    <button class="img">
-      <img src="../Assets/Filter.svg" alt="Icone de menu" />
-    </button>
-  </div>
-
   <body>
+    <div class="header">
+      <h1>Cursos</h1>
+      <button class="img">
+        <img src="../Assets/Filter.svg" alt="Icone de menu" />
+      </button>
+    </div>
+
     <div class="all">
       <div class="conteudo">
-        <div class="tabs">
-          <button class="tab">Visão geral</button>
-          <button class="tab">Mentorias</button>
-          <button class="tab ativa">Cursos</button>
-          <button class="tab">Meus Cursos</button>
-        </div>
+        <div id="navbar"></div>
 
         <div class="secao">
           <div class="secao-header">
@@ -88,5 +84,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../../../shared/components/MentoriasNavBar/script.js"></script>
   </body>
 </html>

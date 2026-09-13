@@ -22,11 +22,7 @@ async function carregarComponente(id, caminho) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Navbar
-    carregarComponente(
-        "navbar",
-        "../../../shared/components/Navbar/navbar.html"
-    );
+    // A navbar de abas é carregada por shared/components/MentoriasNavBar/script.js
 
     // Menu
     carregarComponente(
