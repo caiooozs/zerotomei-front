@@ -1,11 +1,21 @@
 // Carrega a navbar de abas das Atividades e marca a aba da página atual.
-// Basta a página ter <div id="navbar"></div> e importar este arquivo.
+// Basta a página ter <div id="navbar"></div> e importar este arquivo depois dele.
 
-// Guarda o endereço desta pasta para o fetch funcionar de qualquer página.
-const pastaAtividadesNavBar = new URL(".", document.currentScript.src);
+// HTML da navbar (fica aqui no script para aparecer já no primeiro frame da página, sem fetch)
+const templateAtividadesNavBar = `
+<nav class="abas-atividades">
+  <a class="abas-atividades__item" href="../VisãoGeral/index.html"
+    >Visão geral</a
+  >
+  <a class="abas-atividades__item" href="../Calendário/index.html"
+    >Calendário</a
+  >
+  <a class="abas-atividades__item" href="../Lembretes/index.html">Lembretes</a>
+</nav>
+`;
 
 
-function pastaDaUrl(endereco) {
+function pastaDaUrlAtividades(endereco) {
     // Devolve o nome da pasta da página, ex: ".../pages/Atividades/VisãoGeral/index.html" -> "visãogeral"
     const partes = new URL(endereco, location.href).pathname.split("/");
 
@@ -15,12 +25,12 @@ function pastaDaUrl(endereco) {
 }
 
 
-function marcarAbaAtiva(elemento) {
-    const pastaAtual = pastaDaUrl(location.href);
+function marcarAbaAtivaAtividades(elemento) {
+    const pastaAtual = pastaDaUrlAtividades(location.href);
 
     elemento.querySelectorAll(".abas-atividades__item").forEach((link) => {
 
-        if (pastaDaUrl(link.getAttribute("href")) === pastaAtual) {
+        if (pastaDaUrlAtividades(link.getAttribute("href")) === pastaAtual) {
             link.classList.add("abas-atividades__item--ativo");
         }
 
@@ -28,7 +38,7 @@ function marcarAbaAtiva(elemento) {
 }
 
 
-async function carregarAtividadesNavBar(id) {
+function carregarAtividadesNavBar(id) {
     try {
         const elemento = document.getElementById(id);
 
@@ -36,19 +46,9 @@ async function carregarAtividadesNavBar(id) {
             throw new Error(`Não existe um elemento com id "${id}" nesta página`);
         }
 
-        const caminho = new URL("navbar.html", pastaAtividadesNavBar);
+        elemento.innerHTML = templateAtividadesNavBar;
 
-        const resposta = await fetch(caminho);
-
-        if (!resposta.ok) {
-            throw new Error(
-                `Erro ao carregar ${caminho}: ${resposta.status}`
-            );
-        }
-
-        elemento.innerHTML = await resposta.text();
-
-        marcarAbaAtiva(elemento);
+        marcarAbaAtivaAtividades(elemento);
 
     } catch (erro) {
         console.error("Erro ao carregar a AtividadesNavBar:", erro);
@@ -56,8 +56,5 @@ async function carregarAtividadesNavBar(id) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    carregarAtividadesNavBar("navbar");
-
-});
+// O script é importado depois do placeholder, então já dá para renderizar na hora
+carregarAtividadesNavBar("navbar");

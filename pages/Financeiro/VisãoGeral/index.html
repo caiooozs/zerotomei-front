@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Financeiro</title>
+    <link rel="stylesheet" href="../../../shared/components/FinanceiroNavBar/style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../shared/components/NavBarGlobal/style.css" />
+    <link rel="stylesheet" href="../../../shared/styles/transicoes.css" />
   </head>
   <body>
     <div class="container">
@@ -15,11 +18,7 @@
         </div>
       </div>
 
-      <div class="tabs">
-        <a class="tab active" href="VisãoGeral/index.html">Visão geral</a>
-        <a class="tab" href="../Receitas/index.html">Receitas</a>
-        <a class="tab" href="../Despesas/index.html">Despesas</a>
-      </div>
+      <div id="navbar"></div>
 
       <div class="card-saldo">
         <p class="card-saldo-label">Saldo disponível</p>
@@ -80,5 +79,11 @@
         </div>
       </div>
     </div>
+
+    <script src="../../../shared/components/FinanceiroNavBar/script.js"></script>
+
+    <!-- Navbar global (rodapé) -->
+    <div id="navbar-global"></div>
+    <script src="../../../shared/components/NavBarGlobal/script.js"></script>
   </body>
 </html>

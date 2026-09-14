@@ -1,8 +1,14 @@
 // Carrega a navbar de abas do Financeiro e marca a aba da página atual.
-// Basta a página ter <div id="navbar"></div> e importar este arquivo.
+// Basta a página ter <div id="navbar"></div> e importar este arquivo depois dele.
 
-// Guarda o endereço desta pasta para o fetch funcionar de qualquer página.
-const pastaFinanceiroNavBar = new URL(".", document.currentScript.src);
+// HTML da navbar (fica aqui no script para aparecer já no primeiro frame da página, sem fetch)
+const templateFinanceiroNavBar = `
+<nav class="abas-financeiro">
+    <a class="abas-financeiro__item" href="../VisãoGeral/index.html">Visão geral</a>
+    <a class="abas-financeiro__item" href="../Receitas/index.html">Receitas</a>
+    <a class="abas-financeiro__item" href="../Despesas/index.html">Despesas</a>
+</nav>
+`;
 
 
 function pastaDaUrlFinanceiro(endereco) {
@@ -28,7 +34,7 @@ function marcarAbaAtivaFinanceiro(elemento) {
 }
 
 
-async function carregarFinanceiroNavBar(id) {
+function carregarFinanceiroNavBar(id) {
     try {
         const elemento = document.getElementById(id);
 
@@ -36,17 +42,7 @@ async function carregarFinanceiroNavBar(id) {
             throw new Error(`Não existe um elemento com id "${id}" nesta página`);
         }
 
-        const caminho = new URL("navbar.html", pastaFinanceiroNavBar);
-
-        const resposta = await fetch(caminho);
-
-        if (!resposta.ok) {
-            throw new Error(
-                `Erro ao carregar ${caminho}: ${resposta.status}`
-            );
-        }
-
-        elemento.innerHTML = await resposta.text();
+        elemento.innerHTML = templateFinanceiroNavBar;
 
         marcarAbaAtivaFinanceiro(elemento);
 
@@ -56,8 +52,5 @@ async function carregarFinanceiroNavBar(id) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    carregarFinanceiroNavBar("navbar");
-
-});
+// O script é importado depois do placeholder, então já dá para renderizar na hora
+carregarFinanceiroNavBar("navbar");

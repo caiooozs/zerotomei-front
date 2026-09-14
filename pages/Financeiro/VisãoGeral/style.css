@@ -63,27 +63,12 @@ body {
   border-radius: 2px;
 }
 
-.tabs {
-  display: flex;
-  gap: 24px;
-  border-bottom: 1px solid #eee;
+#navbar {
   margin-bottom: 20px;
 }
 
-.tab {
+.abas-financeiro__item {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  color: #999;
-  padding-bottom: 10px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-}
-
-.tab.active {
-  color: #c0392b;
-  border-bottom: 2px solid #c0392b;
 }
 
 .card-saldo {

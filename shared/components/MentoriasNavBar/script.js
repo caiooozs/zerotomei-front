@@ -1,8 +1,15 @@
 // Carrega a navbar de abas das Mentorias e marca a aba da página atual.
-// Basta a página ter <div id="navbar"></div> e importar este arquivo.
+// Basta a página ter <div id="navbar"></div> e importar este arquivo depois dele.
 
-// Guarda o endereço desta pasta para o fetch funcionar de qualquer página.
-const pastaMentoriasNavBar = new URL(".", document.currentScript.src);
+// HTML da navbar (fica aqui no script para aparecer já no primeiro frame da página, sem fetch)
+const templateMentoriasNavBar = `
+<nav class="abas-mentorias">
+    <a class="abas-mentorias__item" href="../VisãoGeral/index.html">Visão geral</a>
+    <a class="abas-mentorias__item" href="../Mentoria/index.html">Mentorias</a>
+    <a class="abas-mentorias__item" href="../Cursos/index.html">Cursos</a>
+    <a class="abas-mentorias__item" href="../MeusCursos/index.html">Meus Cursos</a>
+</nav>
+`;
 
 
 function pastaDaUrlMentorias(endereco) {
@@ -28,7 +35,7 @@ function marcarAbaAtivaMentorias(elemento) {
 }
 
 
-async function carregarMentoriasNavBar(id) {
+function carregarMentoriasNavBar(id) {
     try {
         const elemento = document.getElementById(id);
 
@@ -36,17 +43,7 @@ async function carregarMentoriasNavBar(id) {
             throw new Error(`Não existe um elemento com id "${id}" nesta página`);
         }
 
-        const caminho = new URL("navbar.html", pastaMentoriasNavBar);
-
-        const resposta = await fetch(caminho);
-
-        if (!resposta.ok) {
-            throw new Error(
-                `Erro ao carregar ${caminho}: ${resposta.status}`
-            );
-        }
-
-        elemento.innerHTML = await resposta.text();
+        elemento.innerHTML = templateMentoriasNavBar;
 
         marcarAbaAtivaMentorias(elemento);
 
@@ -56,8 +53,5 @@ async function carregarMentoriasNavBar(id) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    carregarMentoriasNavBar("navbar");
-
-});
+// O script é importado depois do placeholder, então já dá para renderizar na hora
+carregarMentoriasNavBar("navbar");
