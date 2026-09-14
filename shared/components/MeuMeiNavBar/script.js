@@ -10,7 +10,7 @@ const templateMeuMeiNavBar = `
         <h1>Meu Mei</h1>
     </div>
 
-    <button class="topo-mei__filtro">
+    <button class="topo-mei__filtro" type="button" data-abrir-menu aria-label="Abrir menu">
         <img src="../Assets/Filter.svg" alt="Filtrar">
     </button>
 </header>

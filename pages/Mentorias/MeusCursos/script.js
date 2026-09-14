@@ -24,12 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // A navbar de abas é carregada por shared/components/MentoriasNavBar/script.js
 
-    // Menu
-    carregarComponente(
-        "menu",
-        "../../../shared/components/Menu/menu.html"
-    );
-
     // Footer
     carregarComponente(
         "footer",

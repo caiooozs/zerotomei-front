@@ -9,6 +9,7 @@
     <title>Do Zero ao MEI</title>
     <link rel="stylesheet" href="../../shared/components/NavBarGlobal/style.css" />
     <link rel="stylesheet" href="../../shared/styles/transicoes.css" />
+    <link rel="stylesheet" href="../../shared/components/Menu/style.css" />
   </head>
 
   <body id="telainicial">
@@ -22,7 +23,7 @@
 
         <h1 class="telainicial__saudacao">Olá, Evellyn!</h1>
 
-        <button class="telainicial__opcoes" type="button">
+        <button class="telainicial__opcoes" type="button" data-abrir-menu aria-label="Abrir menu">
           <img src="./Assets/Filter.svg" alt="Abrir opções" />
         </button>
       </header>
@@ -144,5 +145,8 @@
     <!-- Navbar global (rodapé) -->
     <div id="navbar-global"></div>
     <script src="../../shared/components/NavBarGlobal/script.js"></script>
+
+    <!-- Menu lateral (abre pelo ícone de filtro) -->
+    <script src="../../shared/components/Menu/script.js"></script>
   </body>
 </html>

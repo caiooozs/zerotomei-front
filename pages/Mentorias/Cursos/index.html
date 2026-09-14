@@ -10,12 +10,13 @@
     <title>Cursos</title>
     <link rel="stylesheet" href="../../../shared/components/NavBarGlobal/style.css" />
     <link rel="stylesheet" href="../../../shared/styles/transicoes.css" />
+    <link rel="stylesheet" href="../../../shared/components/Menu/style.css" />
   </head>
 
   <body>
     <div class="header">
       <h1>Cursos</h1>
-      <button class="img">
+      <button class="img" type="button" data-abrir-menu aria-label="Abrir menu">
         <img src="../Assets/Filter.svg" alt="Icone de menu" />
       </button>
     </div>
@@ -92,5 +93,8 @@
     <!-- Navbar global (rodapé) -->
     <div id="navbar-global"></div>
     <script src="../../../shared/components/NavBarGlobal/script.js"></script>
+
+    <!-- Menu lateral (abre pelo ícone de filtro) -->
+    <script src="../../../shared/components/Menu/script.js"></script>
   </body>
 </html>
