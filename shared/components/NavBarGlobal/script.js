@@ -10,7 +10,7 @@ const raizProjetoGlobal = new URL("../../../", pastaNavBarGlobal);
 // HTML da navbar (fica aqui no script para aparecer já no primeiro frame da página, sem fetch)
 const templateNavBarGlobal = `
 <nav class="navbar-global" aria-label="Navegação principal">
-    <a class="navbar-global__item" data-secao="home" data-destino="pages/TelaInicial/index.html">
+    <a class="navbar-global__item" data-secao="home" data-destino="index.html">
         <svg class="navbar-global__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3.5 10.2 12 3.5l8.5 6.7v9.3a1.5 1.5 0 0 1-1.5 1.5h-4v-6.5h-6V21H5a1.5 1.5 0 0 1-1.5-1.5z" />
         </svg>
@@ -73,8 +73,9 @@ function secaoDaUrlGlobal(endereco) {
 
     const indicePages = partes.lastIndexOf("pages");
 
+    // Fora de pages/ só existe o index.html da raiz, que é a Tela Inicial
     if (indicePages === -1) {
-        return null;
+        return "home";
     }
 
     return secoesNavBarGlobal[partes[indicePages + 1]] || null;

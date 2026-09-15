@@ -11,11 +11,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../../../shared/styles/transicoes.css" />
+    <script src="../../../shared/scripts/api.js"></script>
   </head>
   <body>
     <div class="login-container">
       <div class="logo-container">
-        <img src="/zerotomei-front/shared/imagens/Group 5.png" />
+        <img src="../../../shared/imagens/Group 5.png" alt="Do Zero ao MEI" />
       </div>
 
       <h2 class="title">LOGIN</h2>
@@ -34,8 +35,13 @@
           <a href="../Cadastro/index.html">Cadastrar</a>
         </div>
 
+        <p class="mensagem-form" id="loginMensagem" role="alert"></p>
+        
         <button type="submit" class="btn-primary">ENTRAR</button>
       </form>
+      <div class="signup-link continuar-sem-login">
+        <a href="../../../index.html" id="continuarSemLogin">Continuar sem login</a>
+      </div>
 
       <!-- Botões sociais corrigidos -->
       <div class="social-login">
@@ -49,10 +55,10 @@
           <i class="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
-
+      
       <div class="divider"></div>
       <div class="signup-link">
-        <a href="#">Criar minha conta</a>
+        <a href="../Cadastro/index.html">Criar minha conta</a>
       </div>
     </div>
 

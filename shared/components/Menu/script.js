@@ -126,10 +126,49 @@ function fecharMenuLateral() {
 }
 
 
+async function preencherUsuarioMenuLateral(menu) {
+    // carregarUsuarioLogado vem de shared/scripts/api.js (páginas sem ele mantêm o texto padrão)
+    if (typeof carregarUsuarioLogado !== "function") {
+        return;
+    }
+
+    if (!estaLogado()) {
+        const sair = menu.querySelector(".menu-lateral__sair");
+
+        menu.querySelector(".menu-lateral__avatar").textContent = "V";
+        menu.querySelector(".menu-lateral__nome").textContent = "Visitante,";
+        menu.querySelector(".menu-lateral__email").textContent = "entre para salvar seus dados";
+        sair.lastChild.textContent = " Entrar na conta ";
+        sair.href = new URL(`pages/auth/Login/index.html?voltar=${encodeURIComponent(location.href)}`, raizProjetoMenuLateral).href;
+        return;
+    }
+
+    const usuario = await carregarUsuarioLogado();
+
+    if (!usuario) {
+        return;
+    }
+
+    menu.querySelector(".menu-lateral__avatar").textContent = usuario.nome.trim().charAt(0).toUpperCase();
+    menu.querySelector(".menu-lateral__nome").textContent = `${usuario.nome},`;
+    menu.querySelector(".menu-lateral__email").textContent = usuario.email;
+}
+
+
 function carregarMenuLateral() {
     document.body.insertAdjacentHTML("beforeend", templateMenuLateral);
 
-    montarCaminhosMenuLateral(document.getElementById("menu-lateral"));
+    const menu = document.getElementById("menu-lateral");
+
+    montarCaminhosMenuLateral(menu);
+    preencherUsuarioMenuLateral(menu);
+
+    menu.querySelector(".menu-lateral__sair").addEventListener("click", (evento) => {
+        if (typeof sair === "function" && estaLogado()) {
+            evento.preventDefault();
+            sair();
+        }
+    });
 
     // Delegação: funciona também para botões que aparecem depois (ex.: topo da MeuMeiNavBar)
     document.addEventListener("click", (evento) => {
