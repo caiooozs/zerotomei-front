@@ -23,6 +23,11 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
   mensagem.textContent = "";
   botao.disabled = true;
 
+  // Servidor gratuito "dorme" sem uso e leva um tempo pra responder na primeira requisição
+  const avisoServidor = setTimeout(() => {
+    mensagem.textContent = "Conectando ao servidor, isso pode levar até 1 minuto...";
+  }, 4000);
+
   try {
     const resposta = await apiFetch("/login", {
       method: "POST",
@@ -33,6 +38,9 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     });
 
     const resultado = await resposta.json();
+
+    clearTimeout(avisoServidor);
+    mensagem.textContent = "";
 
     if (!resultado.sucesso) {
       mensagem.textContent = resultado.erro || "Não foi possível entrar.";
@@ -46,6 +54,7 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     console.error("Erro no login:", erro);
     mensagem.textContent = "Não foi possível conectar ao servidor.";
   } finally {
+    clearTimeout(avisoServidor);
     botao.disabled = false;
   }
 });

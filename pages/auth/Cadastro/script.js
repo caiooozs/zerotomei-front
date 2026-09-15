@@ -17,6 +17,10 @@ document.getElementById("cadastroForm").addEventListener("submit", async (event)
   mensagem.textContent = "";
   botao.disabled = true;
 
+  const avisoServidor = setTimeout(() => {
+    mensagem.textContent = "Conectando ao servidor, isso pode levar até 1 minuto...";
+  }, 4000);
+
   try {
     const resposta = await apiFetch("/cadastro", {
       method: "POST",
@@ -28,6 +32,8 @@ document.getElementById("cadastroForm").addEventListener("submit", async (event)
     });
 
     const resultado = await resposta.json();
+
+    clearTimeout(avisoServidor);
 
     if (!resultado.sucesso) {
       mensagem.textContent = resultado.erro || "Não foi possível criar a conta.";
@@ -44,6 +50,7 @@ document.getElementById("cadastroForm").addEventListener("submit", async (event)
     console.error("Erro no cadastro:", erro);
     mensagem.textContent = "Não foi possível conectar ao servidor.";
   } finally {
+    clearTimeout(avisoServidor);
     botao.disabled = false;
   }
 });
